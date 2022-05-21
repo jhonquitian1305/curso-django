@@ -1,0 +1,13 @@
+<h1>Detalle de un Empleado {{ titulo }}</h1>
+{{ empleado }}
+
+<h3>Todos los datos:</h3>
+<p>{{ empleado.first_name }}</p>
+<p>{{ empleado.last_name }}</p>
+<p>{{ empleado.departamento }}</p>
+<h3>Habilidades</h3>
+<p>  
+    {% for h in empleado.habilidades.all %}
+        <li>{{ h.habilidad }}</li>
+    {% endfor %}        
+</p>
